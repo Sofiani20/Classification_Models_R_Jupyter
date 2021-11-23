@@ -1,0 +1,6 @@
+getwd()
+setwd("C:/Users/dell/Documents/apprentissage_ML_DL_Python_R_udemy/codes")
+df<-read.csv("house_price_PP1.csv",header = T, sep=",",dec = ".", row.names = 1)
+simple_model<-lm(price~room_num,data = df)
+summary(simple_model)
+plot(df$room_num,df$price,abline(simple_model,col="red"))
